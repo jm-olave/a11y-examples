@@ -10,9 +10,12 @@
   <body>
     <header>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#" tabindex="1">Home</a></li>
         <li>
           <a href="#">Screen Readers</a>
+        </li>
+        <li>
+          <a id="main" tabindex="0" class = "skip-to-content-link" href = '#main'>Skip to here!</a>
         </li>
         <li>
           <a href="#">Accessible HTML</a>
@@ -36,7 +39,14 @@
     </header>
     <div id="container">
       <h1>Skip link</h1>
-      <button id="main">Skip to here!</button>
+      <main id = "main" onclick="focusInput()">
+        <h2>Content Here!</h2>
+      </main>
     </div>
+    <script>
+         function focusInput() {
+            document.getElementById("main").focus();
+        }
+    </script>
   </body>
 </html>
